@@ -1,0 +1,58 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="website_style.css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+function scrollto(div)
+{
+ $('html,body').animate(
+ {
+  scrollTop: $("#"+div).offset().top
+ },'slow');
+}
+</script>
+</head>
+<body border-color: blue;  
+  border-width: .25em;  
+  border-style: double;>
+
+<div id="header">
+ <li id="site_name">Automated Irrigation Control Center</li>
+ <br><li onclick="scrollto('home');">TEMPERATURE</li>
+ <li onclick="scrollto('about');">MOISTURE CONTENT</li>
+ <li onclick="scrollto('contact');">HUMIDITY</li>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1533541/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=20&title=Temperature+%28degree+C%29&type=line&yaxis=Temperature%28degree+C%29"></iframe>
+
+
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1533541/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=20&title=Moisture+Content%28dm%5E3%2Fg%29&type=line&yaxis=Moisture+Content%28dm%5E3%2Fg%29"></iframe>
+<br>
+
+
+
+  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1533541/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=20&title=Humidity%28%25%29&type=line&yaxis=Humidity%28%25%29"></iframe>
+
+
+
+
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1533541/widgets/371938"></iframe>
+
+<br>
+<br>
+
+<center>  
+	<h1>Manual Irrigation Switch</h1>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span> 
+</center>  
+
+</body>
+</html>
